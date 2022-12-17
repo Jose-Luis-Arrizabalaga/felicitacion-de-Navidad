@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+	width:100%;
+	height:100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 15px;
+	background-image: url('./navidad2022/Screenshot6.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.card{
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 400px;
+	margin: 15px;
+}
+
+.card .face{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.card .front{
+	transform: perspective(600px) rotateY(0deg);
+	box-shadow: 0 5px 10px #000;
+	
+}
+.card .front img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.card .front h3{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #FFE4C4;
+	text-align: center;
+}
+.card .back{
+	transform: perspective(600px) rotateY(180deg);
+	background: #8f1231;
+	padding: 15px;
+	color: #FFE4C4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+.card .back link a{
+	border-top: solid #f3f3f3;
+	height: 50px;
+	line-height: 50px;
+	box-shadow: 0.5px 10px #000;
+	background: url('VID-20221216-WA0019.mp4');
+}
+.card .back a{
+	color: #575050;
+	font-size: 1rem;
+	
+}
+.card .back h2{
+	font-size: 30px;
+	margin-top: 20px;
+	letter-spacing: 2px;
+}
+.face-back p{
+	letter-spacing: 1px;
+}
+.card:hover .front{
+	transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+	transform: perspective(600px) rotateY(360deg);
+}
+
